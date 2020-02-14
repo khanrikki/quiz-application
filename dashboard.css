@@ -1,0 +1,227 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #bbc7df;
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+
+}
+.wrapper .sidebar{
+    position: relative;
+}
+.wrapper .sidebar .sidebar-inner{
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #0054ac;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+.wrapper .main-container{
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    transition: all 0.3s ease;
+}
+.wrapper  .sidebar-inner .profile-info{
+    padding: 30px 50px;
+    text-align: center;
+}
+.wrapper  .sidebar-inner .profile-info .profile-img{
+    width: 125px;
+    margin: 0 auto 15px;
+}
+.wrapper  .sidebar-inner .profile-info .profile-img img{
+    width: 100%;
+    display: block;
+
+}
+.wrapper  .sidebar-inner .profile-info .profile-data .name{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+}
+.wrapper .sidebar-menu li a{
+padding: 10px 50px;
+display: block;
+height: 90px;
+color: #88a3d0;position: relative;
+margin-bottom: 1px;
+text-align: center;
+text-transform: uppercase;
+
+}
+.wrapper .sidebar-menu li a .icon{
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+.wrapper .sidebar-menu li a:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #1fafac;
+    display: none;
+
+}
+.wrapper .sidebar-menu li a:hover,
+.wrapper .sidebar-menu li a.active{
+    background: #1d4c9e;
+    color: #fff;
+}
+.wrapper .sidebar-menu li a:hover:before,
+.wrapper .sidebar-menu li a.active:before
+{
+    display: block;
+}
+.wrapper .main-container .top-nav{
+    width: calc(100% - 250px) ;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.125);
+    transition: all 0.3s ease;
+}
+.wrapper .main-container .top-nav .humburger{
+    width: 30px;
+    height: 30px;
+    display: none;
+    position: relative;
+
+}
+.wrapper .main-container .top-nav .humburger .fa{
+color:#88a3d0;
+font-size: 25px;
+cursor: pointer;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50% ,-50%);
+}
+.wrapper .main-container .top-nav .menu{
+    display: flex;
+   
+}
+.wrapper .main-container .top-nav .menu li a{
+    margin: 0 15px;
+    padding:0 15px;
+    position: relative;
+    color: #0054ac;
+    font-weight: 400;
+    text-align: center;
+    
+
+}
+.wrapper .main-container .top-nav .menu li a:before{
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left:0;
+    width:100%;
+    height: 3px;
+    background: #1fafac;
+    display: none;
+}
+.wrapper .main-container .top-nav .menu li a.active,
+.wrapper .main-container .top-nav .menu li a:hover
+{
+    color: #1fafac;
+    text-decoration: none;
+}
+.wrapper .main-container .top-nav .menu li a.active:before,
+.wrapper .main-container .top-nav .menu li a:hover:before{
+    display: block;
+}
+.wrapper .main-container .top-nav .right-bar{
+    display: flex;
+   
+}
+.wrapper .main-container .top-nav .right-bar li{
+margin:0 10px;
+}
+.wrapper .main-container .top-nav .right-bar li .fa{
+    font-size: 25px;
+    cursor: pointer;
+    color: #88a3d0;
+
+}
+.wrapper .main-container .top-nav .right-bar li:hover,
+.wrapper .main-container .top-nav .humburger .fa:hover
+{
+    opacity: 0.5;
+}
+.wrapper .main-container .container{
+    padding: 30px;
+    margin-top: 60px;
+
+}
+.wrapper .main-container .container .item{
+    background-color: white;
+    padding: 20px;
+    border-radius: 1px solid #d9e2e7;
+    font-size:14px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+.wrapper .close{
+    position: absolute;
+    top: 5px;
+    right:15px;
+    font-size:20px;
+    color: #fff;
+    cursor: pointer;
+    display:none;
+}
+.wrapper .close:hover{
+    opacity: 0.5;
+}
+.feature{
+    padding: 100px 0;
+}
+h1{
+    text-align: center;
+    padding-bottom: 30px;
+
+}
+.feature-img img{
+width: 100%;
+
+}
+
+@media screen and(max-width:700px){
+    .wrapper .sidebar .sidebar-inner{
+        left: -100%;
+    }
+    .wrapper .main-container,
+    .wrapper .main-container .top-nav
+    {
+        width: 100%;
+        margin-left: 0;
+
+    }
+    .wrapper .main-container .top-nav{
+        left:0;
+    }
+    .wrapper .main-container .top-nav .humburger{
+        display: block;
+    }
+    .wrapper .close{
+        display: block;
+    }
+}
